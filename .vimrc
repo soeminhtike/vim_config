@@ -1,5 +1,16 @@
+
+call plug#begin()
+    Plug 'morhetz/gruvbox'
+    Plug 'godlygeek/tabular'
+    Plug 'ziglang/zig.vim'
+    Plug 'preservim/nerdtree'
+    Plug 'tomasiser/vim-code-dark'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
 set nocompatible
 set relativenumber 
+set number
 
 filetype on
 filetype plugin on
@@ -19,3 +30,6 @@ set incsearch
 set nobackup
 
 set ignorecase
+map <leader>r : call Greeting()<CR>
+map <leader>b : call search("Scenario", 'b')<CR>
+colorscheme codedark
